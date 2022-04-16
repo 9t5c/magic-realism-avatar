@@ -1,0 +1,56 @@
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="./src/main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="fake">1</div>
+    <main>
+      <form id="form" autocomplete="off">
+        <div class="form-left">
+          <label>
+            楼号
+            <input
+              id="building"
+              name="building"
+              type="text"
+              value="1#"
+              oninput="if(value.length>4)value=value.substring(0,4)"
+            />
+          </label>
+          <br />
+          <label>
+            户号
+            <input
+              id="room"
+              name="room"
+              type="number"
+              value="101"
+              oninput="if(value.length>4)value=value.substring(0,4)"
+            />
+          </label>
+        </div>
+        <button type="submit">立即生成</button>
+      </form>
+
+      <!-- <canvas id="canvas" width="400" height="400"></canvas> -->
+
+      <section class="img-section"></section>
+
+      <section class="picker-section"></section>
+    </main>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
